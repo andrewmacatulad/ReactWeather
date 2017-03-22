@@ -4,7 +4,7 @@ var express = require('express');
 var app = express();
 // const is use so value can't be change
 // const is convensionally use to be uppercase
-const PORT - process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 // express middleware sample
 app.use(function(req, res, next){
