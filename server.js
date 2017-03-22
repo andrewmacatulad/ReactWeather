@@ -2,9 +2,22 @@ var express = require('express');
 
 
 var app = express();
+// const is use so value can't be change
+// const is convensionally use to be uppercase
+const PORT - process.env.PORT || 3000;
 
+// express middleware sample
+app.use(function(req, res, next){
+  // x-forwarded-proto is either https or http
+  if(res.headers['x-forwarded-proto'] === 'http'){
+    next();
+  } else {
+    res.redirect('http://' + req.hostname + req.url); 
+  }
+})
 app.use(express.static('public'));
 
-app.listen(3000, function(){
-  console.log("YAY");
+
+app.listen(PORT, function(){
+  console.log("Express server is up on port" + PORT);
 });
