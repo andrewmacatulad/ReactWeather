@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 // express middleware sample
 app.use(function(req, res, next){
   // x-forwarded-proto is either https or http
-  if(res.headers['x-forwarded-proto'] === 'http'){
+  if(req.headers['x-forwarded-proto'] === 'http'){
     next();
   } else {
     res.redirect('http://' + req.hostname + req.url);
