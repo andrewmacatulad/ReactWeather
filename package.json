@@ -30,9 +30,12 @@
     "babel-preset-latest": "^6.22.0",
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
-    "css-loader": "^0.26.2",
+    "css-loader": "^0.27.3",
     "file-loader": "^0.10.1",
-    "style-loader": "^0.13.2",
+    "foundation-sites": "^6.3.1",
+    "jquery": "^3.2.1",
+    "script-loader": "^0.7.0",
+    "style-loader": "^0.16.0",
     "url-loader": "^0.5.8",
     "webpack": "^2.2.1"
   }
