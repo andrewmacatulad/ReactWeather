@@ -41,22 +41,16 @@ var Navs = React.createClass({
   },
   render: function(){
     return (
-      // just like bootstrap you use className for foundation the top bar is for the top nav bar
       <div className="top-bar">
-        // the top bar left is the things you want to add in the left side of the top bar
         <div className="top-bar-left">
-          // menu is use in foundation its like nav
           <ul className="menu">
-            // menu text is used when you just want text it will not work on links
             <li className="menu-text">React Weather App</li>
             <li><IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Get Weather</IndexLink></li>
             <li><Link to="/About" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>About</Link></li>
             <li><Link to="/Examples" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Examples</Link></li>
           </ul>
         </div>
-        // the top bar right is the things you want to add in the right side of the top bar
         <div className="top-bar-right">
-          // you add a form because you add a search input box and have an onSearch
           <form onSubmit={this.onSearch}>
             <ul className="menu">
               <li>
