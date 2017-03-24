@@ -16,7 +16,7 @@ require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css')
 $(document).foundation();
 
 // App css
-require('style-loader!css-loader!applicationStyles')
+require('style-loader!css-loader!sass-loader!applicationStyles')
 
 var RoutingFunc = React.createClass({
   render: function(){

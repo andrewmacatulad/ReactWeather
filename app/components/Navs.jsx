@@ -37,7 +37,13 @@ var Navs = React.createClass({
   // create a onSearch function to be used in the Search toolbar
   onSearch: function(e){
     e.preventDefault();
-    alert("Wala pa to")
+    var location = this.refs.location.value;
+    var encodedLocation = encodeURIComponent(location);
+    if(location.length > 0){
+      this.refs.location.value = '';
+      window.location.hash = '#/?location=' + encodedLocation;
+    }
+
   },
   render: function(){
     return (
@@ -54,7 +60,7 @@ var Navs = React.createClass({
           <form onSubmit={this.onSearch}>
             <ul className="menu">
               <li>
-                <input type="search" placeholder="Search by City"/>
+                <input type="search" placeholder="Search by City" ref="location"/>
               </li>
               <li>
                 <input type="submit" className="button" value="Get Weather"/>
