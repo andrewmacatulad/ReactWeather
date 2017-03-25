@@ -44,12 +44,14 @@ var Weather = React.createClass({
 
     if(location && location.length > 0){
       this.handleSearch(location);
+      // this will reset the link to the homepage
       window.location.hash = "#/";
     }
   },
+  // this is built in and will automatically change/update props of the weather.jsx when the url changes
   componentWillReceiveProps: function(newProps){
+    // this is just like the things you add in the componentDidMount but you use the newProps unlike the this.props
     var location = newProps.location.query.location;
-
     if(location && location.length > 0){
       this.handleSearch(location);
       window.location.hash = "#/";
